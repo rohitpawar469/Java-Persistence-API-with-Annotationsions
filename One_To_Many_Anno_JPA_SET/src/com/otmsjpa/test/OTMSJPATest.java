@@ -29,38 +29,31 @@ public class OTMSJPATest {
 			transaction=entityManager.getTransaction();
 			transaction.begin();
 			
-			goldLoans=new HashSet<>();
+			/*
+			 * goldLoans=new HashSet<>();
+			 * 
+			 * goldLoan=new GoldLoan(); goldLoan.setWeightInGrams(10);
+			 * goldLoan.setTenure(36); goldLoan.setInterestRate(8);
+			 * goldLoan.setProcessingFee(5000); goldLoan.setAmount(50000);
+			 * 
+			 * entityManager.persist(goldLoan); goldLoans.add(goldLoan);
+			 * 
+			 * 
+			 * 
+			 * goldLoan=new GoldLoan(); goldLoan.setWeightInGrams(50);
+			 * goldLoan.setTenure(12); goldLoan.setInterestRate(10);
+			 * goldLoan.setProcessingFee(2000); goldLoan.setAmount(250000);
+			 * 
+			 * entityManager.persist(goldLoan); goldLoans.add(goldLoan);
+			 * 
+			 * account=new Account(); account.setAccountHolderName("Rohit Pawar");
+			 * account.setAccountType("Savings Account"); account.setBranch("Malegaon");
+			 * account.setBalance(50000); account.setGoldloans(goldLoans);
+			 * entityManager.persist(account);
+			 */
 			
-			goldLoan=new GoldLoan();
-			goldLoan.setWeightInGrams(10);
-			goldLoan.setTenure(36);
-			goldLoan.setInterestRate(8);
-			goldLoan.setProcessingFee(5000);
-			goldLoan.setAmount(50000);
-			
-			entityManager.persist(goldLoan);
-			goldLoans.add(goldLoan);		
-			
-			
-			
-			goldLoan=new GoldLoan();
-			goldLoan.setWeightInGrams(50);
-			goldLoan.setTenure(12);
-			goldLoan.setInterestRate(10);
-			goldLoan.setProcessingFee(2000);
-			goldLoan.setAmount(250000);
-			
-			entityManager.persist(goldLoan);
-			goldLoans.add(goldLoan);
-			
-			account=new Account();
-			account.setAccountHolderName("Rohit Pawar");
-			account.setAccountType("Savings Account");
-			account.setBranch("Malegaon");
-			account.setBalance(50000);
-			account.setGoldloans(goldLoans);
-			entityManager.persist(account);
-			
+			 account=entityManager.find(Account.class, 9);
+			System.out.println(account);
 			
 			flag = true;
 		} finally {

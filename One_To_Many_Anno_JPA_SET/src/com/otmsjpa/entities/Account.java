@@ -72,12 +72,13 @@ public class Account implements Serializable
 	public void setGoldloans(Set<GoldLoan> goldloans) {
 		this.goldloans = goldloans;
 	}
-	
 	@Override
 	public String toString() {
 		return "Account [accountNo=" + accountNo + ", accountHolderName=" + accountHolderName + ", accountType="
 				+ accountType + ", branch=" + branch + ", balance=" + balance + ", goldloans=" + goldloans + "]";
 	}
+	
+	
 	
 	
 }
