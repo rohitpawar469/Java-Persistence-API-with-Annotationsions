@@ -23,10 +23,16 @@ public class OTOJPATest {
 		
 		try
 		{
+			entityManagerFactory=EntityManagerFactoryHelper.getEntityManagerFactory();
+			entityManager=entityManagerFactory.createEntityManager();
+			transaction=entityManager.getTransaction();
+			transaction.begin();
+			
+			
 			invoice=new Invoice();
 			invoice.setInvoiceDate(new Date());
-			invoice.setDescription("First Payment");
 			invoice.setVendorName("Kabsons Foods ltd.");
+			invoice.setDescription("First Payment");
 			invoice.setAmount(3500);
 			entityManager.persist(invoice);
 			
