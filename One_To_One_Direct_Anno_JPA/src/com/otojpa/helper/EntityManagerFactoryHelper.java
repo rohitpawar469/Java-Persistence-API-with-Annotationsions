@@ -23,7 +23,7 @@ public class EntityManagerFactoryHelper {
 		return entityManagerFactory;
 	}
 
-	public void closeEntityManagerFactory()
+	public static void closeEntityManagerFactory()
 	{
 		if (entityManagerFactory != null) 
 		{
