@@ -23,7 +23,7 @@ public class FoodMenu implements Serializable
 	protected int menuNo;
 	
 	@Column(name = "menu_name")
-	protected int menuName;
+	protected String menuName;
 	
 	@Column(name = "menu_type")
 	protected String menuType;
@@ -34,7 +34,7 @@ public class FoodMenu implements Serializable
 	protected String availableTimings;
 	
 	@OneToMany
-	@JoinColumn(name = "menu_no", nullable = false)
+	@JoinColumn(name = "menu_no", nullable=true)
 	@OrderColumn(name = "serial_no")
 	protected List<FoodItem> foodItems;
 
@@ -46,11 +46,11 @@ public class FoodMenu implements Serializable
 		this.menuNo = menuNo;
 	}
 
-	public int getMenuName() {
+	public String getMenuName() {
 		return menuName;
 	}
 
-	public void setMenuName(int menuName) {
+	public void setMenuName(String menuName) {
 		this.menuName = menuName;
 	}
 
@@ -90,8 +90,8 @@ public class FoodMenu implements Serializable
 	public String toString() {
 		return "FoodMenu [menuNo=" + menuNo + ", menuName=" + menuName + ", menuType=" + menuType + ", description="
 				+ description + ", availableTimings=" + availableTimings + ", foodItems=" + foodItems + "]";
-	} 
-	
-	
+	}
+
+		
 	
 }
