@@ -50,6 +50,11 @@ public class OTMJPATest {
 			materialsUsed.put("PC020", material);
 			
 			contractWork=new ContractWork();
+			contractWork.setContractWorkName("Building");
+			contractWork.setDuration(48);
+			contractWork.setBudget(3500000);
+			contractWork.setUsedMaterials(materialsUsed);
+			entityManager.persist(contractWork);
 			
 			
 			flag=true;
