@@ -33,21 +33,57 @@ public class ContractWork implements Serializable
 	@JoinColumn(name = "contractWork_no")
 	protected Map<String, Material> usedMaterials;
 	
+	
 	public int getContractWorkNo() {
 		return contractWorkNo;
 	}
+
+
+	public void setContractWorkNo(int contractWorkNo) {
+		this.contractWorkNo = contractWorkNo;
+	}
+
+
 	public String getContractWorkName() {
 		return contractWorkName;
 	}
+
+
+	public void setContractWorkName(String contractWorkName) {
+		this.contractWorkName = contractWorkName;
+	}
+
+
 	public int getDuration() {
 		return duration;
 	}
+
+
+	public void setDuration(int duration) {
+		this.duration = duration;
+	}
+
+
 	public int getBudget() {
 		return budget;
 	}
+
+
+	public void setBudget(int budget) {
+		this.budget = budget;
+	}
+
+
 	public Map<String, Material> getUsedMaterials() {
 		return usedMaterials;
 	}
+
+
+	public void setUsedMaterials(Map<String, Material> usedMaterials) {
+		this.usedMaterials = usedMaterials;
+	}
+
+
 	@Override
 	public String toString() {
 		return "ContractWork [contractWorkNo=" + contractWorkNo + ", contractWorkName=" + contractWorkName

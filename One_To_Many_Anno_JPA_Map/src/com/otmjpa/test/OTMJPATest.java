@@ -33,11 +33,23 @@ public class OTMJPATest {
 			materialsUsed=new HashMap<String, Material>();
 			
 			material=new Material();
+			material.setMaterialName("Cement");
+			material.setQuantity(50);
+			material.setAmount(50000);
+			entityManager.persist(material);
+			
+			materialsUsed.put("PC001", material);
 			
 			
+			material=new Material();
+			material.setMaterialName("Bricks");
+			material.setQuantity(5000);
+			material.setAmount(35000);
+			entityManager.persist(material);
 			
+			materialsUsed.put("PC020", material);
 			
-			
+			contractWork=new ContractWork();
 			
 			
 			flag=true;
