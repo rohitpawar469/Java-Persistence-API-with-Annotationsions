@@ -66,12 +66,20 @@ public class CASJPATest {
 			 */
 			
 			  
+			/*
+			 * csr=session.get(Csr.class, 33);
+			 * complaint=csr.getAssignedComplaints().iterator().next();
+			 * 
+			 * csr.setExperience(15); complaint.setSeverity(9); session.merge(csr);
+			 */
+			  
+			 
+			  
 			  csr=session.get(Csr.class, 33);
-			  complaint=csr.getAssignedComplaints().iterator().next();
-			
-			  csr.setExperience(15);
-			  complaint.setSeverity(9);
-			  session.merge(csr);
+			  session.delete(csr);
+			  
+			  
+			  
 			  
 			  
 			  

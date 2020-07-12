@@ -33,7 +33,7 @@ public class Csr implements Serializable
 	protected int experience;
 	protected String mobileNo;
 	
-	@OneToMany(cascade = { CascadeType.PERSIST,CascadeType.MERGE})
+	@OneToMany(cascade = { CascadeType.PERSIST,CascadeType.MERGE,CascadeType.DETACH})
 	@JoinColumn(name = "csr_no")
 	Set<Complaint> assignedComplaints;
 	
