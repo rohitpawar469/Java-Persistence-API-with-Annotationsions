@@ -3,12 +3,29 @@ package com.casjpa.entities;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
+@Entity
+@Table(name = "complaint")
 public class Complaint implements Serializable 
 {
+	@Id
+	@Column(name = "complaint_no")
+	@GeneratedValue(strategy =GenerationType.AUTO )
 	protected int complaintNo;
+	
 	protected String title;
 	protected String description;
+	
+	@Column(name = "reported_date")
 	protected Date reportedDate;
+	
 	protected int priority;
 	protected int severity;
 	protected String Status;
