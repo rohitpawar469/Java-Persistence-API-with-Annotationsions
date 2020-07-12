@@ -3,15 +3,38 @@ package com.casjpa.entities;
 import java.io.Serializable;
 import java.util.Set;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.IdClass;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
+
 import com.casjpa.entities.Complaint;
 
+
+@Entity
+@Table(name = "csr")
 public class Csr implements Serializable 
 {
+	@Id
+	@Column(name = "csr_no")
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	protected int csrNo;
+	
+	@Column(name = "full_name")
 	protected String fullName;
+	
 	protected String designation;
 	protected int experience;
 	protected String mobileNo;
+	
+	@OneToMany(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "csr_no")
 	Set<Complaint> assignedComplaints;
 	
 	

@@ -12,7 +12,7 @@
     	<property name="hibernate.hbm2ddl.auto">update</property>
     	<property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
     	
-    	<mapping class="com.casjpa.Complaint"/>
-    	<mapping class="com.casjpa.Csr"/>	
+    	<mapping class="com.casjpa.entities.Complaint"/>
+    	<mapping class="com.casjpa.entities.Csr"/>	
     </session-factory>
 </hibernate-configuration>
